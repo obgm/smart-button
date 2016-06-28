@@ -1,0 +1,11 @@
+[Unit]
+Description=Shutdown button
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/irq-shutdown.py -P 16
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target
